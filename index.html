@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Country information seek-up 2.0</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<!-- Search -->
+<div class="search-container">
+    <input id="search-bar" type="text" />
+        <button id="search-btn" type="button">
+            Search
+    </button>
+    <p id="error-field"></p>
+    <div id="countries"></div>
+</div>
+
+<!-- Country overview -->
+<img src="assets/world_map.png" alt="Map of the world" class="world-map" />
+<div id="error-container"></div>
+
+<div id="country-overview">
+    <h2>Countries ordered by population</h2>
+    <label>Select your preferred order first:
+        <select class="sort" name="sort">
+            <option value=""></option>
+            <option value="desc">Descending</option>
+            <option value="asc">Ascending</option>
+        </select>
+    </label>
+    <ul id="country-overview-list">
+
+    </ul>
+</div>
+
+
+<script src="./node_modules/axios/dist/axios.min.js"></script>
+<script src="main.js"></script>
 
 </body>
 </html>
